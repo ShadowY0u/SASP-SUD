@@ -563,146 +563,162 @@ width:100%;
   background: rgba(108,166,255,0.10);
 }
 
-/* =======================================
-   COMMUNICATIONS — TABLEAU 
-   ======================================= */
+/* PAGE DOCS / COMMUNICATIONS */
 
-.comms-card{
-  margin-top: 14px;
-  padding: 18px;
-  border-radius: 20px;
-  border: 1px solid rgba(255,255,255,.08);
-  background: rgba(255,255,255,.03);
-  box-shadow: 0 12px 34px rgba(0,0,0,.38);
+.docs-layout{
+  display:grid;
+  grid-template-columns:280px 1fr;
+  gap:48px;
+  max-width:1200px;
+  margin:0 auto;
+  padding:40px 28px 80px;
 }
 
-.comms-head{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-  margin-bottom: 8px;
+.docs-sidebar{
+  position:sticky;
+  top:20px;
+  height:fit-content;
+  padding:14px;
+  border-right:1px solid rgba(255,255,255,0.06);
 }
 
-.comms-title{
-  margin:0;
-  font-size: 20px;
-  letter-spacing: .2px;
+.docs-link{
+  display:block;
+  padding:12px 14px;
+  margin-bottom:8px;
+  border-radius:14px;
+  text-decoration:none;
+  color:#cfcfcf;
+  background:transparent;
+  transition:all .2s ease;
+  font-weight:600;
 }
 
-.comms-badge{
-  font-size: 12px;
-  font-weight: 900;
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(79,140,255,.35);
-  background: rgba(79,140,255,.10);
-  color: rgba(232,238,252,.90);
+.docs-link:hover{
+  background:rgba(255,255,255,0.05);
+  color:#fff;
 }
 
-.comms-subtitle{
-  margin: 16px 0 10px;
-  font-size: 13px;
-  font-weight: 950;
-  letter-spacing: .35px;
-  text-transform: uppercase;
-  color: rgba(232,238,252,.85);
+.docs-link--active{
+  background:rgba(255,255,255,0.08);
+  color:#9fc0ff;
 }
 
-/* Wrap = scroll mobile + cadre propre */
+.docs-content{
+  max-width:760px;
+}
+
+.docs-section{
+  margin-bottom:56px;
+}
+
+.docs-section h1{
+  font-size:34px;
+  margin-bottom:26px;
+  color:#fff;
+}
+
+.docs-section h2{
+  font-size:28px;
+  margin-bottom:22px;
+  color:#fff;
+}
+
+.docs-section p{
+  font-size:18px;
+  line-height:1.7;
+  color:#f0f0f0;
+  margin-bottom:22px;
+}
+
+.docs-highlight{
+  text-align:center;
+  font-weight:700;
+  font-size:19px;
+  color:#ffffff;
+  margin:30px 0;
+}
+
+.docs-next{
+  margin-top:28px;
+  border:1px solid rgba(255,255,255,0.10);
+  border-radius:18px;
+  padding:18px 20px;
+  background:rgba(255,255,255,0.02);
+}
+
+.docs-next__label{
+  display:block;
+  font-size:14px;
+  color:#b8b8b8;
+  margin-bottom:8px;
+}
+
+.docs-next__link{
+  font-size:28px;
+  text-decoration:none;
+  color:#ffffff;
+  font-weight:700;
+}
+
+.docs-updated{
+  margin-top:22px;
+  font-size:14px !important;
+  color:#a7a7a7 !important;
+}
+
 .comms-table-wrap{
-  overflow-x: auto;
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,.10);
-  background: rgba(0,0,0,.22);
+  overflow-x:auto;
+  margin-top:18px;
 }
 
-/* Table */
 .comms-table{
-  width: 100%;
-  border-collapse: separate;      /* important pour garder le radius clean */
-  border-spacing: 0;
-  min-width: 620px;               /* évite que tout s’écrase */
+  width:100%;
+  border-collapse:collapse;
+  background:rgba(255,255,255,0.02);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:14px;
+  overflow:hidden;
 }
 
-/* Header */
-.comms-table thead th{
+.comms-table th{
   text-align:left;
-  padding: 13px 14px;
-  font-size: 13px;
-  font-weight: 950;
-  color: rgba(232,238,252,.92);
-  background: rgba(255,255,255,.06);
-  border-bottom: 1px solid rgba(255,255,255,.10);
-  position: sticky;               /* optionnel mais stylé quand tu scroll */
-  top: 0;
-  backdrop-filter: blur(8px);
+  padding:14px 16px;
+  background:rgba(255,255,255,0.04);
+  color:#fff;
+  font-size:15px;
 }
 
-/* Radius header */
-.comms-table thead th:first-child{
-  border-top-left-radius: 16px;
-}
-.comms-table thead th:last-child{
-  border-top-right-radius: 16px;
+.comms-table td{
+  padding:14px 16px;
+  border-top:1px solid rgba(255,255,255,0.06);
+  color:#e6e6e6;
 }
 
-/* Body cells */
-.comms-table tbody td{
-  padding: 12px 14px;
-  font-size: 14px;
-  color: rgba(232,238,252,.86);
-  border-bottom: 1px solid rgba(255,255,255,.06);
-  vertical-align: top;
+.comms-table tr:hover{
+  background:rgba(255,255,255,0.03);
 }
 
-/* Colonne code */
-.comms-table tbody td:first-child{
-  width: 120px;
-  font-weight: 950;
-  letter-spacing: .25px;
-  color: rgba(122,167,255,.95);
-  white-space: nowrap;
+.comms-table td:first-child{
+  font-weight:700;
+  color:#9fc0ff;
 }
 
-/* Zebra rows */
-.comms-table tbody tr:nth-child(odd) td{
-  background: rgba(255,255,255,.02);
-}
-.comms-table tbody tr:nth-child(even) td{
-  background: rgba(255,255,255,.035);
-}
+@media (max-width: 900px){
+  .docs-layout{
+    grid-template-columns:1fr;
+    gap:26px;
+  }
 
-/* Hover clean */
-.comms-table tbody tr:hover td{
-  background: rgba(79,140,255,.12);
-}
+  .docs-sidebar{
+    position:relative;
+    top:auto;
+    border-right:none;
+    border-bottom:1px solid rgba(255,255,255,0.06);
+    padding-bottom:18px;
+  }
 
-/* Dernière ligne radius */
-.comms-table tbody tr:last-child td:first-child{
-  border-bottom-left-radius: 16px;
-}
-.comms-table tbody tr:last-child td:last-child{
-  border-bottom-right-radius: 16px;
-}
-
-/* Petits textes en italique dans table */
-.comms-table em{
-  color: rgba(168,179,207,.95);
-  font-style: italic;
-}
-
-/* Note */
-.comms-note{
-  margin: 12px 2px 0;
-  padding-top: 10px;
-  border-top: 1px solid rgba(255,255,255,.08);
-  color: rgba(168,179,207,.95);
-  line-height: 1.6;
-}
-
-/* Mobile : on réduit un peu */
-@media (max-width: 560px){
-  .comms-card{padding: 14px}
-  .comms-title{font-size: 18px}
+  .docs-content{
+    max-width:100%;
+  }
 }
