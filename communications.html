@@ -148,5 +148,19 @@
   </section>
 </main>
 
+  <script>
+
+function showSection(sectionId){
+
+const sections = document.querySelectorAll(".docs-section");
+sections.forEach(section => {
+section.classList.remove("active");
+});
+
+document.getElementById(sectionId).classList.add("active");
+
+}
+
+</script>
 </body>
 </html>
