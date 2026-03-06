@@ -609,19 +609,12 @@ width:100%;
 }
 
 .docs-section{
-  margin-bottom:56px;
+display:none;
 }
 
-.docs-section h1{
-  font-size:34px;
-  margin-bottom:26px;
-  color:#fff;
+.docs-section.active{
+display:block;
 }
-
-.docs-section h2{
-  font-size:28px;
-  margin-bottom:22px;
-  color:#fff;
 }
 
 .docs-section p{
