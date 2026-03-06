@@ -4,12 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>S.A.S.P - Communications</title>
+  <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
 <header class="topbar">
+
   <div class="topbar__left">
+
     <div class="brand">
       <div class="brand__logo">
         <img src="favicon.png" alt="Logo SASP">
@@ -29,136 +33,161 @@
       <a class="nav__link" href="effectif.html">Effectif</a>
       <a class="nav__link" href="formation.html">Formation</a>
     </nav>
+
   </div>
+
+  <div class="topbar__right">
+    <div class="search">
+      <span class="search__icon">⌕</span>
+      <input class="search__input" type="search" placeholder="Rechercher..." />
+      <span class="search__hint">Ctrl K</span>
+    </div>
+  </div>
+
 </header>
 
-<aside class="docs-sidebar">
+<main class="container">
 
-<a class="docs-link active" onclick="showSection('introduction')">Introduction</a>
+<section class="hero">
+  <h1 class="hero__title">Communications</h1>
+  <p class="hero__subtitle">Codes radio — clarté, précision, discipline.</p>
+</section>
 
-<a class="docs-link" onclick="showSection('codeten')">Code Ten</a>
+<hr class="divider" />
 
-<a class="docs-link" onclick="showSection('frequence')">Fréquence</a>
+<!-- CODE TEN -->
 
-<a class="docs-link" onclick="showSection('indicatif')">Indicatif</a>
+<section class="comms-card">
 
-</aside>
+<div class="comms-head">
+  <h2 class="comms-title">Code Ten</h2>
+  <span class="comms-badge">Radio [2]</span>
+</div>
 
-  <section class="docs-content">
-    <article id="introduction" class="docs-section">
-      <h1>Introduction</h1>
+<!-- Codes généraux -->
 
-      <p>
-        Les communications radios sont primordiales, elles permettent de communiquer avec le reste des
-        patrouilles ainsi qu’avec le dispatch et les postes de commandement mobiles.
-      </p>
+<h3 class="comms-subtitle">Codes généraux</h3>
 
-      <p>
-        Elles jouent un rôle clé dans la coordination des patrouilles sur le terrain, l’affectation aux appels
-        et les demandes de renforts.
-      </p>
+<div class="comms-table-wrap">
+<table class="comms-table">
 
-      <p>
-        Cependant il y a des règles à respecter, vos communications doivent être structurées avec votre
-        indicatif, les codes radios, etc...
-      </p>
+<thead>
+<tr>
+<th>Codes</th>
+<th>Signification</th>
+</tr>
+</thead>
 
-      <p class="docs-highlight">
-        Les communications doivent être rapides, audibles, claires et concises
-      </p>
+<tbody>
+<tr><td>10-01</td><td>Répétez</td></tr>
+<tr><td>10-04</td><td>Affirmatif</td></tr>
+<tr><td>10-05</td><td>Négatif</td></tr>
+<tr><td>10-07</td><td>Pause de service</td></tr>
+<tr><td>10-08</td><td>Prise de service</td></tr>
+<tr><td>10-10</td><td>Fin de service</td></tr>
+</tbody>
 
-      <p>
-        Vous devez prendre soin de votre radio, elle fait partie de votre matériel de service, toute perte
-        d’équipement de service vous expose à des sanctions.
-      </p>
+</table>
+</div>
 
-      <div class="docs-next">
-        <span class="docs-next__label">Next</span>
-        <a href="#code-ten" class="docs-next__link">Code Ten</a>
-      </div>
+<!-- Déplacements -->
 
-      <p class="docs-updated">Last updated 26 days ago</p>
-    </article>
+<h3 class="comms-subtitle">Déplacements et patrouilles</h3>
 
-    <article id="code-ten" class="docs-section">
-      <h2>Code Ten</h2>
+<div class="comms-table-wrap">
+<table class="comms-table">
 
-      <div class="comms-table-wrap">
-        <table class="comms-table">
-          <thead>
-            <tr>
-              <th>Code</th>
-              <th>Signification</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>10-01</td><td>Répétez</td></tr>
-            <tr><td>10-04</td><td>Affirmatif</td></tr>
-            <tr><td>10-05</td><td>Négatif</td></tr>
-            <tr><td>10-07</td><td>Pause de service</td></tr>
-            <tr><td>10-08</td><td>Prise de service</td></tr>
-            <tr><td>10-10</td><td>Fin de service</td></tr>
-            <tr><td>10-12</td><td>Patrouille</td></tr>
-            <tr><td>10-17</td><td>En direction de…</td></tr>
-            <tr><td>10-18</td><td>Arrivé sur les lieux</td></tr>
-            <tr><td>10-31</td><td>Course-poursuite</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </article>
+<thead>
+<tr>
+<th>Codes</th>
+<th>Signification</th>
+</tr>
+</thead>
 
-    <article id="frequence" class="docs-section">
-      <h2>Fréquence</h2>
-      <p>Radio principale : canal de service.</p>
-      <p>Les communications doivent rester courtes, claires et organisées.</p>
-    </article>
+<tbody>
+<tr><td>10-12</td><td>Patrouille (secteur à préciser)</td></tr>
+<tr><td>10-17</td><td>En direction de…</td></tr>
+<tr><td>10-18</td><td>Arrivé(e) sur les lieux</td></tr>
+<tr><td>10-19</td><td>Retour au poste</td></tr>
+<tr><td>10-20</td><td>Position GPS</td></tr>
+</tbody>
 
-    <article id="indicatif" class="docs-section">
-      <h2>Indicatif</h2>
-      <p>Chaque agent doit annoncer son indicatif avant toute transmission importante.</p>
-      <p>Exemple : unité + position + motif + besoin.</p>
-    </article>
+</table>
+</div>
 
-    <article id="urgence" class="docs-section">
-      <h2>Niveaux d’urgence</h2>
+<!-- Interventions -->
 
-      <div class="comms-table-wrap">
-        <table class="comms-table">
-          <thead>
-            <tr>
-              <th>Code</th>
-              <th>Signification</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Code 2</td><td>Renforts minimaux</td></tr>
-            <tr><td>Code 3</td><td>Renforts importants</td></tr>
-            <tr><td>Code 4</td><td>Fin d’intervention</td></tr>
-            <tr><td>Code 5</td><td>Surveillance discrète (filature, observation, etc.)</td></tr>
-            <tr><td>Code 6</td><td>Enquête sur place (agent engagé dans une investigation)</td></tr>
-            <tr><td>Code 99</td><td>Agent à terre → toutes les unités doivent intervenir immédiatement</td></tr>
-            <tr><td>Code S</td><td>Silence radio requis → utilisé lors de situations critiques</td></tr>
-            <tr><td>Code DS</td><td>Suspect abattu → suspect neutralisé ou hors d’état de nuire</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </article>
-  </section>
+<h3 class="comms-subtitle">Interventions et situations spécifiques</h3>
+
+<div class="comms-table-wrap">
+<table class="comms-table">
+
+<thead>
+<tr>
+<th>Codes</th>
+<th>Signification</th>
+</tr>
+</thead>
+
+<tbody>
+<tr><td>10-26</td><td>Suspect appréhendé</td></tr>
+<tr><td>10-30</td><td>Contrôle routier <em>(faire un Code 2 en plus)</em></td></tr>
+<tr><td>10-31</td><td>Course-poursuite</td></tr>
+<tr><td>10-41</td><td>Braquage <em>(fleeca, pacifique, supérette — précisez en radio)</em></td></tr>
+<tr><td>10-42</td><td>Cambriolage</td></tr>
+<tr><td>10-50</td><td>Accident</td></tr>
+<tr><td>10-51</td><td>Tir d’arme à feu <em>(tir entendu ou signalé)</em></td></tr>
+<tr><td>10-60</td><td>Vente de drogue</td></tr>
+<tr><td>10-78</td><td>Besoin de renfort</td></tr>
+<tr><td>10-83</td><td>Information sur situation</td></tr>
+</tbody>
+
+</table>
+</div>
+
+<!-- NIVEAUX D'URGENCE -->
+
+<h3 class="comms-subtitle">Niveaux d’urgence</h3>
+
+<div class="comms-table-wrap">
+<table class="comms-table">
+
+<thead>
+<tr>
+<th>Code</th>
+<th>Signification</th>
+</tr>
+</thead>
+
+<tbody>
+<tr><td>Code 2</td><td>Renforts minimaux</td></tr>
+<tr><td>Code 3</td><td>Renforts importants</td></tr>
+<tr><td>Code 4</td><td>Fin d’intervention</td></tr>
+<tr><td>Code 5</td><td>Surveillance discrète (filature, observation, etc.)</td></tr>
+<tr><td>Code 6</td><td>Enquête sur place</td></tr>
+<tr><td>Code 99</td><td>Agent à terre → toutes les unités doivent intervenir immédiatement</td></tr>
+<tr><td>Code S</td><td>Silence radio requis</td></tr>
+<tr><td>Code DS</td><td>Suspect abattu</td></tr>
+</tbody>
+
+</table>
+</div>
+
+<p class="comms-note">
+✅ Toujours annoncer : <b>lieu</b> + <b>motif</b> + <b>besoin</b> (renfort / EMS / périmètre).
+</p>
+
+</section>
+
 </main>
 
-  <script>
+<footer class="footer">
+<p>© <span id="year"></span> S.A.S.P — Portail interne</p>
+</footer>
 
-function showSection(sectionId){
-
-const sections = document.querySelectorAll(".docs-section");
-sections.forEach(section => {
-section.classList.remove("active");
-});
-
-document.getElementById(sectionId).classList.add("active");
-
-}
-
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
